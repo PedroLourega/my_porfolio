@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}Contato | Pedro{% endblock %}
+
+{% block content %}
+<section class="reveal">
+  <h1>Contato</h1>
+
+  {% if success %}
+    <p class="success">Mensagem enviada! (no V1 é simulado — depois a gente liga no Mongo/email)</p>
+  {% endif %}
+
+  {% if errors %}
+    <div class="errors">
+      {% for e in errors %}
+        <p>• {{ e }}</p>
+      {% endfor %}
+    </div>
+  {% endif %}
+
+  <form method="post" class="form">
+    <input name="name" placeholder="Seu nome" value="{{ values.name if values else '' }}">
+    <input name="email" placeholder="Seu email" value="{{ values.email if values else '' }}">
+    <textarea name="message" placeholder="Sua mensagem">{{ values.message if values else '' }}</textarea>
+    <button class="btn" type="submit">Enviar</button>
+  </form>
+</section>
+{% endblock %}

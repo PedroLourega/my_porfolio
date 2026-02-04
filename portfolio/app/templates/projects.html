@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block title %}Projetos | Pedro{% endblock %}
+
+{% block content %}
+<section class="reveal">
+  <h1>Projetos</h1>
+  {% if active_tag %}
+    <p class="muted">Filtrando por: <strong>{{ active_tag }}</strong> — <a href="/projects">limpar</a></p>
+  {% endif %}
+
+  <div class="grid">
+    {% for p in projects %}
+      <article class="card reveal">
+        <h3>{{ p.title }}</h3>
+        <p>{{ p.description }}</p>
+
+        <div class="tags">
+          {% for t in p.tags %}
+            <a class="tag" href="/projects?tag={{ t }}">{{ t }}</a>
+          {% endfor %}
+        </div>
+
+        <div class="cardlinks">
+          {% if p.links.github %}<a href="{{ p.links.github }}" target="_blank">GitHub</a>{% endif %}
+          {% if p.links.demo %}<a href="{{ p.links.demo }}" target="_blank">Demo</a>{% endif %}
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}

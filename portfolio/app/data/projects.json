@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Game Data ETL Pipeline",
+    "description": "Pipeline de ETL com validação, padronização e carga. Foco em dados e automação.",
+    "tags": ["python", "pandas", "etl"],
+    "links": {
+      "github": "https://github.com/seu-user/seu-repo",
+      "demo": ""
+    }
+  },
+  {
+    "title": "Sistema Lan House",
+    "description": "Sistema de gerenciamento com operações e controle de fluxo. Projeto prático.",
+    "tags": ["python", "flask", "sqlite"],
+    "links": {
+      "github": "https://github.com/seu-user/seu-repo",
+      "demo": ""
+    }
+  }
+]

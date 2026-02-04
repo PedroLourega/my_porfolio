@@ -1,0 +1,310 @@
+:root{
+  --bg:#0b0b0c;
+  --panel:#111114;
+  --text:#eaeaea;
+  --muted:#a0a0a0;
+  --line:#222228;
+}
+
+*{ box-sizing:border-box; }
+body{
+  margin:0;
+  font-family:Poppins, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background:var(--bg);
+  color:var(--text);
+}
+
+a{ color:var(--text); text-decoration:none; opacity:.9; }
+a:hover{ opacity:1; }
+
+.container{ width:min(1100px, 92%); margin:0 auto; padding:32px 0 64px; }
+
+.nav{
+  position:sticky; top:0;
+  background:rgba(11,11,12,.75);
+  backdrop-filter: blur(10px);
+  border-bottom:1px solid var(--line);
+  display:flex; justify-content:space-between; align-items:center;
+  padding:16px 4%;
+}
+.logo{ font-weight:600; letter-spacing:.5px; }
+.links a{ margin-left:18px; }
+
+/* ---------- HERO / TELA INICIAL ---------- */
+.hero{
+  min-height: 78vh;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;   /* centralizado */
+  text-align:center;
+  gap:18px;
+  padding:56px 0;
+}
+
+.hero p{
+  max-width: 62ch;
+  color: var(--muted);
+}
+
+.cta{
+  display:flex;
+  gap:12px;
+  margin-top:10px;
+  justify-content:center;
+  flex-wrap:wrap;
+}
+.btn{
+  display:inline-flex; align-items:center; justify-content:center;
+  padding:10px 16px;
+  border-radius:12px;
+  border:1px solid var(--line);
+  background:var(--text);
+  color:#111;
+  font-weight:600;
+}
+.btn.ghost{
+  background:transparent;
+  color:var(--text);
+}
+
+.grid{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:14px;
+  margin-top:14px;
+}
+@media (max-width: 900px){
+  .grid{ grid-template-columns:1fr; }
+  .hero h1{ font-size:32px; }
+}
+
+.card{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:16px;
+  transition: transform .2s ease, border-color .2s ease;
+}
+.card:hover{
+  transform: translateY(-2px);
+  border-color:#2f2f38;
+}
+
+.tags{ display:flex; flex-wrap:wrap; gap:8px; margin-top:10px; }
+.tag{
+  font-size:12px;
+  padding:6px 10px;
+  border-radius:999px;
+  border:1px solid var(--line);
+  color:var(--muted);
+}
+.cardlinks{ margin-top:12px; display:flex; gap:12px; }
+
+.muted{ color:var(--muted); }
+.success{ color:#b8ffcc; }
+.errors{
+  border:1px solid #3a1f1f;
+  background:#160d0d;
+  padding:12px;
+  border-radius:12px;
+}
+
+.form{ display:grid; gap:10px; width:min(520px, 100%); margin-top:14px; }
+input, textarea{
+  padding:12px 14px;
+  border-radius:12px;
+  border:1px solid var(--line);
+  background:#0f0f12;
+  color:var(--text);
+  outline:none;
+}
+textarea{ min-height:120px; resize:vertical; }
+
+.footer{
+  border-top:1px solid var(--line);
+  padding:16px 4%;
+  color:var(--muted);
+}
+
+/* animação */
+.reveal{
+  opacity:0;
+  transform: translateY(10px);
+  transition: opacity .6s ease, transform .6s ease;
+}
+.reveal.is-visible{
+  opacity:1;
+  transform: translateY(0);
+}
+/* ---------- NAV RESPONSIVA (FULLSCREEN) ---------- */
+.menu-btn{
+  display:none;
+  width:44px;
+  height:44px;
+  border-radius:12px;
+  border:1px solid var(--line);
+  background:transparent;
+  cursor:pointer;
+  position:relative;
+  z-index: 10001; /* acima do menu */
+}
+
+.menu-icon,
+.menu-icon::before,
+.menu-icon::after{
+  content:"";
+  display:block;
+  width:18px;
+  height:2px;
+  background:var(--text);
+  position:absolute;
+  left:50%;
+  transform:translateX(-50%);
+  transition: transform .2s ease, opacity .2s ease, top .2s ease;
+}
+
+.menu-icon{ top:50%; }
+.menu-icon::before{ top:-6px; position:absolute; }
+.menu-icon::after{ top:6px; position:absolute; }
+
+.menu-btn.is-open .menu-icon{ opacity:0; }
+.menu-btn.is-open .menu-icon::before{
+  top:0;
+  transform: translateX(-50%) rotate(45deg);
+}
+.menu-btn.is-open .menu-icon::after{
+  top:0;
+  transform: translateX(-50%) rotate(-45deg);
+}
+
+/* desktop normal */
+.links{
+  display:flex;
+  gap:18px;
+}
+
+/* mobile fullscreen */
+@media (max-width: 820px){
+  .menu-btn{ display:inline-flex; align-items:center; justify-content:center; }
+
+  .links{
+    display:none; 
+    position:fixed;
+    inset:0;                 
+    z-index:10000;
+    background:rgba(11,11,12,.96);
+    backdrop-filter: blur(10px);
+
+    padding:90px 6% 24px;    
+    flex-direction:column;
+    gap:14px;
+
+    border:0;
+  }
+
+  .links.is-open{ display:flex; }
+
+  .links a{
+    font-size:18px;
+    padding:12px 14px;
+    border:1px solid var(--line);
+    border-radius:14px;
+    background:rgba(17,17,20,.55);
+  }
+}
+
+/* About */
+.tech-grid{
+  display:grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap:14px;
+  margin-top:14px;
+}
+
+.tech-card{
+  aspect-ratio: 1 / 1;       /* quadrado perfeito */
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  background:#0f0f12;
+  border:1px solid var(--line);
+  border-radius:16px;
+  transition: transform .2s ease, border-color .2s ease;
+}
+
+.tech-card i{
+  font-size:34px;
+  color: var(--text);        /* deixa monocromático (clean) */
+  opacity:.9;
+}
+
+.tech-card:hover{
+  transform: translateY(-2px);
+  border-color:#2f2f38;
+}
+
+@media (max-width: 420px){
+  .tech-grid{ grid-template-columns: repeat(2, 1fr); }
+}
+
+/* ESPAÇAMENTO GERAL */
+.container{
+  width:min(1100px, 92%);
+  margin:0 auto;
+  padding:44px 0 96px; 
+}
+
+.section{
+  padding:64px 0;                 
+  border-top:1px solid var(--line);
+  margin-top:44px;
+}
+
+.grid{
+  gap:18px;                       
+  margin-top:18px;
+}
+
+/* ---------- HOME SEÇÕES ---------- */
+.two-col{
+  display:grid;
+  grid-template-columns: 1.2fr .8fr;
+  gap:20px;
+  align-items:start;
+}
+
+@media (max-width: 900px){
+  .two-col{ grid-template-columns:1fr; }
+}
+
+.tech-box{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:18px;
+}
+
+.section-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:baseline;
+  gap:12px;
+  margin-bottom:6px;
+}
+
+.cta-card{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:18px;
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:18px;
+}
+
+@media (max-width: 900px){
+  .cta-card{ flex-direction:column; align-items:flex-start; }
+}

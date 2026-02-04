@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% block title %}Home | Pedro Lourega{% endblock %}
+
+{% block content %}
+<section class="hero reveal">
+  <h1>Backend e Dados com Python</h1>
+  <p>Flask, SQL, ETL e automação. Um portfólio direto ao ponto.</p>
+
+  <div class="cta">
+    <a class="btn" href="/projects">Ver projetos</a>
+    <a class="btn ghost" href="/contact">Falar comigo</a>
+  </div>
+</section>
+
+<section class="section reveal" id="sobre">
+  <div class="two-col">
+    <div>
+      <h2>Sobre</h2>
+      <p class="muted">
+        Sou estudante de ADS com foco em backend e dados. Curto automação, ETL, APIs e projetos práticos que viram portfólio de verdade.
+      </p>
+      <p class="muted">
+        Meu objetivo é entrar como Dev Jr/Estágio e evoluir rápido com base em prática e entregas.
+      </p>
+    </div>
+
+    <div class="tech-box">
+      <h3>Tecnologias</h3>
+      <div class="tech-grid">
+        <div class="tech-card"><i class="devicon-python-plain"></i></div>
+        <div class="tech-card"><i class="devicon-flask-original"></i></div>
+        <div class="tech-card"><i class="devicon-sqlite-plain"></i></div>
+        <div class="tech-card"><i class="devicon-mongodb-plain"></i></div>
+        <div class="tech-card"><i class="devicon-pandas-plain"></i></div>
+        <div class="tech-card"><i class="devicon-git-plain"></i></div>
+        <div class="tech-card"><i class="devicon-html5-plain"></i></div>
+        <div class="tech-card"><i class="devicon-css3-plain"></i></div>
+        <div class="tech-card"><i class="devicon-javascript-plain"></i></div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section class="section reveal" id="projetos">
+  <div class="section-head">
+    <h2>Principais projetos</h2>
+    <a class="muted" href="/projects">ver todos →</a>
+  </div>
+
+  <div class="grid">
+    {% for p in featured %}
+      <article class="card">
+        <h3>{{ p.title }}</h3>
+        <p>{{ p.description }}</p>
+        <div class="tags">
+          {% for t in p.tags %}
+            <a class="tag" href="/projects?tag={{ t }}">{{ t }}</a>
+          {% endfor %}
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="section reveal" id="contato">
+  <div class="cta-card">
+    <div>
+      <h2>Vamos conversar?</h2>
+      <p class="muted">Se curtir meus projetos, me chama. Eu respondo rápido.</p>
+    </div>
+    <div class="cta">
+      <a class="btn" href="/contact">Contato</a>
+      <a class="btn ghost" href="/projects">Projetos</a>
+    </div>
+  </div>
+</section>
+{% endblock %}
