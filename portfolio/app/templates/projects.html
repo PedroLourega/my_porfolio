@@ -4,25 +4,37 @@
 {% block content %}
 <section class="reveal">
   <h1>Projetos</h1>
+
   {% if active_tag %}
-    <p class="muted">Filtrando por: <strong>{{ active_tag }}</strong> — <a href="/projects">limpar</a></p>
+    <p class="muted">
+      Filtrando por: <strong>{{ active_tag }}</strong> — <a href="/projects">limpar</a>
+    </p>
   {% endif %}
 
   <div class="grid">
     {% for p in projects %}
-      <article class="card reveal">
-        <h3>{{ p.title }}</h3>
-        <p>{{ p.description }}</p>
+      {% set tags = p.get('tags', []) %}
+      {% set links = p.get('links', {}) %}
 
-        <div class="tags">
-          {% for t in p.tags %}
-            <a class="tag" href="/projects?tag={{ t }}">{{ t }}</a>
-          {% endfor %}
-        </div>
+      <article class="card reveal">
+        <h3>{{ p.get('title', 'Sem título') }}</h3>
+        <p>{{ p.get('description', '') }}</p>
+
+        {% if tags %}
+          <div class="tags">
+            {% for t in tags %}
+              <a class="tag" href="/projects?tag={{ t }}">{{ t }}</a>
+            {% endfor %}
+          </div>
+        {% endif %}
 
         <div class="cardlinks">
-          {% if p.links.github %}<a href="{{ p.links.github }}" target="_blank">GitHub</a>{% endif %}
-          {% if p.links.demo %}<a href="{{ p.links.demo }}" target="_blank">Demo</a>{% endif %}
+          {% if links.get('github') %}
+            <a href="{{ links.get('github') }}" target="_blank" rel="noopener">GitHub</a>
+          {% endif %}
+          {% if links.get('demo') %}
+            <a href="{{ links.get('demo') }}" target="_blank" rel="noopener">Demo</a>
+          {% endif %}
         </div>
       </article>
     {% endfor %}

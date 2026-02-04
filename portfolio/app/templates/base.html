@@ -14,7 +14,8 @@
   <script defer src="{{ url_for('static', filename='js/main.js') }}"></script>
 </head>
 
-<body>
+<body class="{% block body_class %}{% endblock %}">
+<canvas id="trailCanvas" class="trail-canvas"></canvas>
  <header class="nav">
   <a class="logo" href="/">Pedro Lourega</a>
 
