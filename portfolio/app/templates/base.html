@@ -11,13 +11,16 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
 
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/logo.png') }}?v=2">
   <script defer src="{{ url_for('static', filename='js/main.js') }}"></script>
 </head>
 
 <body class="{% block body_class %}{% endblock %}">
 <canvas id="trailCanvas" class="trail-canvas"></canvas>
  <header class="nav">
-  <a class="logo" href="/">Pedro Lourega</a>
+  <a class="logo" href="/">
+  <img src="{{ url_for('static', filename='img/logo.png') }}" alt="Logo Pedro Lourega" class="logo-img">
+</a>
 
   <button class="menu-btn" id="menuBtn" aria-label="Abrir menu" aria-expanded="false">
     <span class="menu-icon"></span>

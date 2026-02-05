@@ -3,10 +3,11 @@
 {% block body_class %}home{% endblock %}
 
 {% block content %}
-<section class="hero reveal">
-  <canvas id="trailCanvas" class="trail-canvas"></canvas>
-  <h1>Backend e Dados com Python</h1>
-  <p>Flask, SQL, ETL e automação. Um portfólio direto ao ponto.</p>
+<link rel="icon" type="image/png" href="{{ url_for('static', filename='img/logo.png') }}">
+<section class="hero reveal" id="hero">
+  <h1 class="hero-name">Pedro Lourega</h1>
+  <h2>Backend e Dados com Python</h2>
+  <p>SQL, ETL, IA e automação.</p>
 
   <div class="cta">
     <a class="btn" href="/projects">Ver projetos</a>

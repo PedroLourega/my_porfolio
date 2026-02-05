@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block title %}Projetos | Pedro{% endblock %}
+{% block title %}Projetos | Pedro Lourega{% endblock %}
 
 {% block content %}
 <section class="reveal">
@@ -17,6 +17,15 @@
       {% set links = p.get('links', {}) %}
 
       <article class="card reveal">
+              {% set img = p.get('image') %}
+      {% if img %}
+        <img
+          class="card-img"
+          src="{{ url_for('static', filename='img/projects/' ~ img) }}"
+          alt="{{ p.get('title', 'Projeto') }}"
+          loading="lazy"
+        >
+      {% endif %}
         <h3>{{ p.get('title', 'Sem título') }}</h3>
         <p>{{ p.get('description', '') }}</p>
 

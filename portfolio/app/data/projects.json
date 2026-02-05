@@ -16,5 +16,12 @@
       "github": "https://github.com/seu-user/seu-repo",
       "demo": ""
     }
-  }
+  },
+  {
+  "title": "Game Data ETL Pipeline",
+  "description": "Pipeline de ETL...",
+  "tags": ["python", "pandas", "etl"],
+  "image": "etl.png",
+  "links": { "github": "...", "demo": "" }
+}
 ]
