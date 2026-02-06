@@ -6,62 +6,204 @@
 <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/logo.png') }}">
 <section class="hero reveal" id="hero">
   <h1 class="hero-name">Pedro Lourega</h1>
-  <h2>Backend e Dados com Python</h2>
-  <p>SQL, ETL, IA e automação.</p>
+  <h2>Analista de Dados & Backend com foco em Python</h2>
+  <p>ETL com Pandas, integrações com MongoDB/SQL e automação para transformar dados em entrega.</p>
 
   <div class="cta">
-    <a class="btn" href="/projects">Ver projetos</a>
-    <a class="btn ghost" href="/contact">Falar comigo</a>
-  </div>
+  <a class="btn" href="{{ url_for('static', filename='files/CV_Pedro_Lourega.pdf') }}" download>
+    Baixar CV
+  </a>
+  <a class="btn ghost" href="/contact">Falar comigo</a>
+</div>
 </section>
 
 <section class="section reveal" id="sobre">
-  <div class="two-col">
-    <div>
+  <div class="about-wrap">
+
+    <div class="about-text">
       <h2>Sobre</h2>
+      <p class="muted">Analista de Dados com foco em Python e ETL.</p>
       <p class="muted">
-        Sou estudante de ADS com foco em backend e dados. Curto automação, ETL, APIs e projetos práticos que viram portfólio de verdade.
+        Estudante de Análise e Desenvolvimento de Sistemas na FADERGS.<br>
+        Com mais de 2 anos de experiência prática construindo rotinas de extração e transformação, limpeza e padronização de dados com Pandas.
+        Tenho experiência com integrações usando MongoDB (Atlas/PyMongo) e SQL.
       </p>
-      <p class="muted">
-        Meu objetivo é entrar como Dev Jr/Estágio e evoluir rápido com base em prática e entregas.
-      </p>
+
+      <div class="cta cta-left">
+        <a class="btn ghost" href="/about">Ver mais sobre mim</a>
+
+        <a class="btn ghost btn-icon" href="https://www.linkedin.com/in/pedrolourega" target="_blank" rel="noopener">
+          <i class="devicon-linkedin-plain"></i>
+          LinkedIn
+        </a>
+
+        <a class="btn ghost btn-icon" href="https://github.com/PedroLourega" target="_blank" rel="noopener">
+          <i class="devicon-github-original"></i>
+          GitHub
+        </a>
+      </div>
     </div>
 
-    <div class="tech-box">
-      <h3>Tecnologias</h3>
-      <div class="tech-grid">
-        <div class="tech-card"><i class="devicon-python-plain"></i></div>
-        <div class="tech-card"><i class="devicon-flask-original"></i></div>
-        <div class="tech-card"><i class="devicon-sqlite-plain"></i></div>
-        <div class="tech-card"><i class="devicon-mongodb-plain"></i></div>
-        <div class="tech-card"><i class="devicon-pandas-plain"></i></div>
-        <div class="tech-card"><i class="devicon-git-plain"></i></div>
-        <div class="tech-card"><i class="devicon-html5-plain"></i></div>
-        <div class="tech-card"><i class="devicon-css3-plain"></i></div>
-        <div class="tech-card"><i class="devicon-javascript-plain"></i></div>
+    <div class="about-stack">
+      <h3 class="stack-title">Stack</h3>
+
+      <div class="tech-row">
+        <span class="tech-pill"><i class="devicon-python-plain"></i></span>
+        <span class="tech-pill"><i class="devicon-pandas-plain"></i></span>
+        <span class="tech-pill"><i class="devicon-flask-original"></i></span>
+        <span class="tech-pill"><i class="devicon-mongodb-plain"></i></span>
+        <span class="tech-pill"><i class="devicon-mysql-plain"></i></span>
+        <span class="tech-pill"><i class="devicon-sqlite-plain"></i></span>
+        <span class="tech-pill"><i class="devicon-javascript-plain"></i></span>
+        <span class="tech-pill"><i class="devicon-html5-plain"></i></span>
+        <span class="tech-pill"><i class="devicon-css3-plain"></i></span>
+        <span class="tech-pill"><i class="devicon-git-plain"></i></span>
+        <span class="tech-pill"><i class="devicon-numpy-plain"></i></span>
+        <span class="tech-pill"><i class="devicon-vscode-plain"></i></span>
+      </div>
+
+      <div class="grid">
+        <article class="card">
+          <h3>Foco</h3>
+          <p class="muted">
+            Python + ETL + automação. Rotinas de extração, limpeza e padronização com Pandas, integrando dados com MongoDB e SQL.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Formação</h3>
+          <p class="muted">
+            ADS na FADERGS (2023–06/2026). Buscando também me aprofundar através de cursos em: Excel, AWS e IA.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>Inglês</h3>
+          <p class="muted">
+            Intermediário: leitura fluente de documentação técnica, escrita eficiente para comunicação e conversação básica.
+          </p>
+        </article>
+      </div>
     </div>
-    </div>
+
   </div>
-</section>
 
 <section class="section reveal" id="projetos">
   <div class="section-head">
-    <h2>Principais projetos</h2>
-    <a class="muted" href="/projects">ver todos →</a>
+    <h2>Projetos principais</h2>
+    <a class="muted" href="/projects">ver todos</a>
   </div>
 
   <div class="grid">
-    {% for p in featured %}
-      <article class="card">
-        <h3>{{ p.title }}</h3>
-        <p>{{ p.description }}</p>
-        <div class="tags">
-          {% for t in p.tags %}
-            <a class="tag" href="/projects?tag={{ t }}">{{ t }}</a>
-          {% endfor %}
+    <article class="card">
+      <h3>PsicoConnect</h3>
+      <p class="muted">Aplicação web full stack com autenticação por perfis e fluxo de agendamentos.</p>
+      <div class="tags">
+        <span class="tag">Python</span><span class="tag">SQLite</span><span class="tag">Flask</span><span class="tag">Full-Stack</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <h3>ETL para Jogos</h3>
+      <p class="muted">ETL em CSV com regras de negócio + geração de mensagens e menu interativo no terminal.</p>
+      <div class="tags">
+        <span class="tag">Python</span><span class="tag">CSV</span><span class="tag">CLI</span><span class="tag">Pandas</span><span class="tag">ETL</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <h3>Estoque + ETL (Ferragem)</h3>
+      <p class="muted">Migração de planilhas para MongoDB Atlas com limpeza e padronização de dados e CRUD via terminal.</p>
+      <div class="tags">
+      <span class="tag">Python</span><span class="tag">MongoDB</span><span class="tag">PyMongo</span><span class="tag">ETL</span><span class="tag">CLI</span>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section reveal" id="experiencia">
+  <div class="section-head">
+    <h2>Histórico profissional</h2>
+    <a class="muted" href="/about">ver detalhes</a>
+  </div>
+
+  <div class="exp-list">
+
+    <article class="card exp-item">
+      <div class="exp-top">
+        <div>
+          <h3>Freelance — Desenvolvimento Web e Suporte de TI</h3>
+          <p class="muted exp-sub">Atuação prática com manutenção, suporte remoto e entregas pontuais</p>
         </div>
-      </article>
-    {% endfor %}
+        <span class="muted exp-date">2018 — atual</span>
+      </div>
+
+      <ul class="exp-bullets">
+        <li>Manutenção de computadores, instalação de equipamentos/peças, backups e instalação de sistemas.</li>
+        <li>Suporte remoto e resolução de problemas do dia a dia.</li>
+        <li>Criação de landing pages e sistemas simples conforme necessidade do cliente.</li>
+      </ul>
+
+      <div class="exp-foot">
+        <div class="tags">
+          <span class="tag">Suporte</span>
+          <span class="tag">Infraestrutura</span>
+          <span class="tag">Web</span>
+          <span class="tag">Hardware</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="card exp-item">
+      <div class="exp-top">
+        <div>
+          <h3>Secretário Técnico — Escola MVP</h3>
+          <p class="muted exp-sub">Atendimento, rotinas administrativas e apoio técnico</p>
+        </div>
+        <span class="muted exp-date">2024 — 2025</span>
+      </div>
+
+      <ul class="exp-bullets">
+        <li>Atendimento ao cliente e rotinas administrativas, com controle de documentos e organização.</li>
+        <li>Suporte e manutenção de PCs no ambiente de trabalho.</li>
+        <li>Suporte com Microsoft Office e criação de planilhas para controle de frequência.</li>
+      </ul>
+
+      <div class="exp-foot">
+        <div class="tags">
+          <span class="tag">Atendimento</span>
+          <span class="tag">Excel</span>
+          <span class="tag">Planilhas</span>
+          <span class="tag">Suporte</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="card exp-item">
+      <div class="exp-top">
+        <div>
+          <h3>Assistente Administrativo — Instituto de Cardiologia</h3>
+          <p class="muted exp-sub">Rotina administrativa em ambiente hospitalar</p>
+        </div>
+        <span class="muted exp-date">2022 — 2024</span>
+      </div>
+
+      <ul class="exp-bullets">
+        <li>Organização de documentos, atendimento ao público e aplicação de termos aos pacientes.</li>
+        <li>Funções administrativas gerais e apoio às rotinas da unidade.</li>
+        <li>Suporte com Microsoft Office e criação de planilhas de organização da unidade hospitalar.</li>
+      </ul>
+
+      <div class="exp-foot">
+        <div class="tags">
+          <span class="tag">Administrativo</span>
+          <span class="tag">Atendimento</span>
+          <span class="tag">Documentos</span>
+          <span class="tag">Excel</span>
+        </div>
+      </div>
+    </article>
+
   </div>
 </section>
 
@@ -69,11 +211,14 @@
   <div class="cta-card">
     <div>
       <h2>Vamos conversar?</h2>
-      <p class="muted">Se curtir meus projetos, me chama. Eu respondo rápido.</p>
+      <p class="muted">Se tiver alguma oportunidade que combine com meu perfil, entre em contato.</p>
     </div>
     <div class="cta">
+      
       <a class="btn" href="/contact">Contato</a>
-      <a class="btn ghost" href="/projects">Projetos</a>
+      <a class="btn ghost" href="{{ url_for('static', filename='files/CV_Pedro_Lourega.pdf') }}" download>
+    Baixar CV
+  </a>
     </div>
   </div>
 </section>

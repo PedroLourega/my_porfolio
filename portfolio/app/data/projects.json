@@ -21,7 +21,7 @@
   "title": "Game Data ETL Pipeline",
   "description": "Pipeline de ETL...",
   "tags": ["python", "pandas", "etl"],
-  "image": "etl.png",
+  "image": "",
   "links": { "github": "...", "demo": "" }
 }
 ]

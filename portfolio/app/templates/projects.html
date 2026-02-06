@@ -18,14 +18,12 @@
 
       <article class="card reveal">
               {% set img = p.get('image') %}
-      {% if img %}
-        <img
-          class="card-img"
+    {% if img %}
+      <img class="card-img"
           src="{{ url_for('static', filename='img/projects/' ~ img) }}"
           alt="{{ p.get('title', 'Projeto') }}"
-          loading="lazy"
-        >
-      {% endif %}
+          loading="lazy">
+    {% endif %}
         <h3>{{ p.get('title', 'Sem título') }}</h3>
         <p>{{ p.get('description', '') }}</p>
 

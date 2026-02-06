@@ -1,20 +1,207 @@
 {% extends "base.html" %}
-{% block title %}Sobre | Pedro Lourega{% endblock %}
+{% block title %}Sobre | Pedro{% endblock %}
 
 {% block content %}
-<section class="reveal">
-  <h1>Sobre</h1>
-  <p>
-    Sou estudante de ADS com foco em backend e dados.
-    Curto construir coisas úteis: automação, ETL, integrações e apps simples que resolvem problema.
+<section class="section reveal" id="sobre-detalhado">
+  <div class="section-head">
+    <h1>Sobre</h1>
+  </div>
+
+  <article class="card about-card">
+  <h2>Quem eu sou</h2>
+
+  <p class="muted">
+    Sou Analista de Dados em formação, com foco em Python, ETL e automação.
+    Curto transformar dados “sujos” em informação pronta pra uso, com rotina bem organizada e entrega clara.
   </p>
 
-  <h2>Stack</h2>
-  <ul class="list">
-    <li><strong>Core:</strong> Python, SQL</li>
-    <li><strong>Dados:</strong> Pandas, ETL, MongoDB</li>
-    <li><strong>Web:</strong> Flask, HTML, CSS, JavaScript</li>
-    <li><strong>Tools:</strong> Git, Excel</li>
-  </ul>
+  <p class="muted">
+    Tenho base forte em suporte e infraestrutura desde 2018, o que me deixou muito prático: diagnosticar rápido,
+    manter padrão, documentar e resolver sem enrolação. Hoje eu trago essa mentalidade direto pra dados e backend.
+  </p>
+
+  <div class="about-points">
+    <div class="point">
+      <h4>O que eu faço bem</h4>
+      <ul class="bullets">
+        <li>ETL com Pandas: limpeza, padronização, validação e conversão</li>
+        <li>Integração com bancos: SQL e MongoDB (Atlas/PyMongo)</li>
+        <li>Automação de rotinas e organização de pipeline</li>
+      </ul>
+    </div>
+
+    <div class="point">
+      <h4>O que eu busco</h4>
+      <ul class="bullets">
+        <li>Primeira oportunidade em Dados ou Backend</li>
+        <li>Ambiente com aprendizado real e gente boa pra evoluir junto</li>
+        <li>Projetos com problema real, onde dá pra medir resultado</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="cta cta-left" style="margin-top:14px;">
+    <a class="btn" href="{{ url_for('static', filename='files/CV_Pedro_Lourega.pdf') }}" download>
+    Baixar CV
+  </a>
+    <a class="btn ghost btn-icon" href="https://www.linkedin.com/in/pedrolourega" target="_blank" rel="noopener">
+      <i class="devicon-linkedin-plain"></i> LinkedIn
+    </a>
+
+    <a class="btn ghost btn-icon" href="https://github.com/PedroLourega" target="_blank" rel="noopener">
+      <i class="devicon-github-original"></i> GitHub
+    </a>
+    
+  </div>
+</article>
+
+<section class="section reveal" id="skills">
+  <div class="section-head">
+    <h2>Habilidades</h2>
+  </div>
+
+  <div class="skills-grid">
+    <article class="card">
+      <h3>Soft skills</h3>
+      <ul class="bullets">
+        <li>Organização e responsabilidade</li>
+        <li>Autodidata</li>
+        <li>Resolução de problemas</li>
+        <li>Aprendizagem rápida</li>
+        <li>Trabalho em equipe</li>
+      </ul>
+    </article>
+
+    <article class="card">
+      <h3>Ferramentas</h3>
+      <div class="chips">
+        <span class="chip">Git</span>
+        <span class="chip">GitHub</span>
+        <span class="chip">VS Code</span>
+        <span class="chip">Excel</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <h3>Metodologias</h3>
+      <div class="chips">
+        <span class="chip">ETL (extração > limpeza > carregamento)</span>
+        <span class="chip">Padronização e validação de dados</span>
+        <span class="chip">Versionamento e organização</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <h3>Linguagens</h3>
+      <div class="chips">
+        <span class="chip">Python</span>
+        <span class="chip">SQL</span>
+        <span class="chip">JavaScript</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <h3>Frameworks e libs</h3>
+      <div class="chips">
+        <span class="chip">Flask</span>
+        <span class="chip">Pandas</span>
+        <span class="chip">NumPy</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <h3>Bancos de dados</h3>
+      <div class="chips">
+        <span class="chip">MongoDB (Atlas / PyMongo)</span>
+        <span class="chip">MySQL</span>
+        <span class="chip">SQLite</span>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section reveal" id="experiencia">
+  <div class="section-head">
+    <h2>Histórico profissional</h2>
+  </div>
+
+  <div class="exp-list">
+
+    <article class="card exp-item">
+      <div class="exp-top">
+        <div>
+          <h3>Freelance — Desenvolvimento Web e Suporte de TI</h3>
+          <p class="muted exp-sub">Atuação prática com manutenção, suporte remoto e entregas pontuais</p>
+        </div>
+        <span class="muted exp-date">2018 — atual</span>
+      </div>
+
+      <ul class="exp-bullets">
+        <li>Manutenção de computadores, instalação de equipamentos/peças, backups e instalação de sistemas.</li>
+        <li>Suporte remoto e resolução de problemas do dia a dia.</li>
+        <li>Criação de landing pages e sistemas simples conforme necessidade do cliente.</li>
+      </ul>
+
+      <div class="exp-foot">
+        <div class="tags">
+          <span class="tag">Suporte</span>
+          <span class="tag">Infraestrutura</span>
+          <span class="tag">Web</span>
+          <span class="tag">Hardware</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="card exp-item">
+      <div class="exp-top">
+        <div>
+          <h3>Secretário Técnico — Escola MVP</h3>
+          <p class="muted exp-sub">Atendimento, rotinas administrativas e apoio técnico</p>
+        </div>
+        <span class="muted exp-date">2024 — 2025</span>
+      </div>
+
+      <ul class="exp-bullets">
+        <li>Atendimento ao cliente e rotinas administrativas, com controle de documentos e organização.</li>
+        <li>Suporte e manutenção de PCs no ambiente de trabalho.</li>
+        <li>Suporte com Microsoft Office e criação de planilhas para controle de frequência.</li>
+      </ul>
+
+      <div class="exp-foot">
+        <div class="tags">
+          <span class="tag">Atendimento</span>
+          <span class="tag">Excel</span>
+          <span class="tag">Planilhas</span>
+          <span class="tag">Suporte</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="card exp-item">
+      <div class="exp-top">
+        <div>
+          <h3>Assistente Administrativo — Instituto de Cardiologia</h3>
+          <p class="muted exp-sub">Rotina administrativa em ambiente hospitalar</p>
+        </div>
+        <span class="muted exp-date">2022 — 2024</span>
+      </div>
+
+      <ul class="exp-bullets">
+        <li>Organização de documentos, atendimento ao público e aplicação de termos aos pacientes.</li>
+        <li>Funções administrativas gerais e apoio às rotinas da unidade.</li>
+        <li>Suporte com Microsoft Office e criação de planilhas de organização da unidade hospitalar.</li>
+      </ul>
+
+      <div class="exp-foot">
+        <div class="tags">
+          <span class="tag">Administrativo</span>
+          <span class="tag">Atendimento</span>
+          <span class="tag">Documentos</span>
+          <span class="tag">Excel</span>
+        </div>
+      </div>
+    </article>
+
+  </div>
 </section>
 {% endblock %}
