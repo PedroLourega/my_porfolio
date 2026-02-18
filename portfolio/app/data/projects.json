@@ -1,11 +1,11 @@
 [
   {
-    "title": "Study Repository",
+    "title": "Repositório de Estudos",
     "description": "Repositório estruturado para estudos contínuos com exercícios, snippets, mini projetos e anotações técnicas para revisão.",
     "tags": ["python", "flask", "javascript", "sqlite", "html", "css"],
     "image": "",
     "links": {
-      "github": "https://github.com/PedroLourega",
+      "github": "https://github.com/PedroLourega/study",
       "demo": ""
     }
   },
@@ -15,7 +15,7 @@
     "tags": ["python", "flask", "sqlite", "html", "css", "javascript"],
     "image": "",
     "links": {
-      "github": "https://github.com/PedroLourega",
+      "github": "https://github.com/PedroLourega/sitema_psicologos",
       "demo": ""
     }
   },
@@ -25,7 +25,7 @@
     "tags": ["python", "flask", "sqlite", "html", "css"],
     "image": "",
     "links": {
-      "github": "https://github.com/PedroLourega",
+      "github": "https://github.com/PedroLourega/sistema_lanhouse",
       "demo": ""
     }
   },
@@ -35,7 +35,7 @@
     "tags": ["python", "pandas", "mongodb", "pymongo", "etl", "cli"],
     "image": "",
     "links": {
-      "github": "https://github.com/PedroLourega",
+      "github": "https://github.com/PedroLourega/ferragem_etl",
       "demo": ""
     }
   },
@@ -45,7 +45,7 @@
     "tags": ["python", "pandas", "etl", "csv", "cli"],
     "image": "",
     "links": {
-      "github": "https://github.com/PedroLourega",
+      "github": "https://github.com/PedroLourega/projeto_pratico_ETL_python",
       "demo": ""
     }
   }

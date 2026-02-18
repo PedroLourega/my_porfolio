@@ -1,27 +1,59 @@
 {% extends "base.html" %}
-{% block title %}Contato | Pedro Lourega{% endblock %}
+{% block title %}Contato | Pedro{% endblock %}
 
 {% block content %}
-<section class="reveal">
-  <h1>Contato</h1>
+<section class="section reveal" id="contato">
+  <div class="section-head">
+    <h1>Contato</h1>
+  </div>
 
-  {% if success %}
-    <p class="success">Mensagem enviada! (no V1 é simulado — depois a gente liga no Mongo/email)</p>
-  {% endif %}
+  <div class="contact-wrap">
+    <!-- Info fixa -->
+    <article class="card contact-card">
+      <h2>Vamos conversar</h2>
+      <p class="muted">
+        Se quiser falar sobre projetos, vagas ou networking, pode me chamar por aqui:
+      </p>
 
-  {% if errors %}
-    <div class="errors">
-      {% for e in errors %}
-        <p>• {{ e }}</p>
-      {% endfor %}
-    </div>
-  {% endif %}
+      <div class="contact-list">
+        <div class="contact-item">
+          <span class="muted label">Nome</span>
+          <span class="value">Pedro Henrique Lourega</span>
+        </div>
 
-  <form method="post" class="form">
-    <input name="name" placeholder="Seu nome" value="{{ values.name if values else '' }}">
-    <input name="email" placeholder="Seu email" value="{{ values.email if values else '' }}">
-    <textarea name="message" placeholder="Sua mensagem">{{ values.message if values else '' }}</textarea>
-    <button class="btn" type="submit">Enviar</button>
-  </form>
+        <div class="contact-item">
+          <span class="muted label">WhatsApp</span>
+          <a class="value link" href="https://wa.me/5551999209035" target="_blank" rel="noopener">
+            51 99920-9035
+          </a>
+        </div>
+
+        <div class="contact-item">
+          <span class="muted label">Email</span>
+          <a class="value link" href="mailto:pedrolouregadev@gmail.com">
+            pedrolouregadev@gmail.com
+          </a>
+        </div>
+      </div>
+
+      <div class="cta cta-left" style="margin-top:14px;">
+        <a class="btn ghost btn-icon" href="https://www.linkedin.com/in/pedrolourega" target="_blank" rel="noopener">
+          <i class="devicon-linkedin-plain"></i> LinkedIn
+        </a>
+        <a class="btn ghost btn-icon" href="https://github.com/PedroLourega" target="_blank" rel="noopener">
+          <i class="devicon-github-original"></i> GitHub
+        </a>
+        <a class="btn" href="{{ url_for('static', filename='files/CV_Pedro_Lourega.pdf') }}" download>
+          Baixar CV
+        </a>
+      </div>
+    </article>
+
+
+      {# opcional: mensagens de feedback (quando tu implementar POST) #}
+      {# {% if success %}<p class="success">{{ success }}</p>{% endif %} #}
+      {# {% if error %}<div class="errors">{{ error }}</div>{% endif %} #}
+    </article>
+  </div>
 </section>
 {% endblock %}
