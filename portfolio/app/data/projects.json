@@ -1,27 +1,52 @@
 [
   {
-    "title": "Game Data ETL Pipeline",
-    "description": "Pipeline de ETL com validação, padronização e carga. Foco em dados e automação.",
-    "tags": ["python", "pandas", "etl"],
+    "title": "Study Repository",
+    "description": "Repositório estruturado para estudos contínuos com exercícios, snippets, mini projetos e anotações técnicas para revisão.",
+    "tags": ["python", "flask", "javascript", "sqlite", "html", "css"],
+    "image": "",
     "links": {
-      "github": "https://github.com/seu-user/seu-repo",
+      "github": "https://github.com/PedroLourega",
       "demo": ""
     }
   },
   {
-    "title": "Sistema Lan House",
-    "description": "Sistema de gerenciamento com operações e controle de fluxo. Projeto prático.",
-    "tags": ["python", "flask", "sqlite"],
+    "title": "PsicoConnect",
+    "description": "Aplicação web para atendimentos psicológicos online com login para psicólogo/paciente, agendamento e visualização de consultas.",
+    "tags": ["python", "flask", "sqlite", "html", "css", "javascript"],
+    "image": "",
     "links": {
-      "github": "https://github.com/seu-user/seu-repo",
+      "github": "https://github.com/PedroLourega",
       "demo": ""
     }
   },
   {
-  "title": "Game Data ETL Pipeline",
-  "description": "Pipeline de ETL...",
-  "tags": ["python", "pandas", "etl"],
-  "image": "",
-  "links": { "github": "...", "demo": "" }
-}
+    "title": "Sistema de Gerenciamento de Lan House",
+    "description": "Sistema acadêmico aplicado a um caso real para cálculo de tempo/valor, cadastro de usuários e gestão de créditos de horas.",
+    "tags": ["python", "flask", "sqlite", "html", "css"],
+    "image": "",
+    "links": {
+      "github": "https://github.com/PedroLourega",
+      "demo": ""
+    }
+  },
+  {
+    "title": "Sistema de Gestão de Estoque e ETL (Ferragem)",
+    "description": "Projeto em Python com ETL de planilhas e CRUD em banco NoSQL na nuvem, com tratamento de moeda, padronização e carga em lote.",
+    "tags": ["python", "pandas", "mongodb", "pymongo", "etl", "cli"],
+    "image": "",
+    "links": {
+      "github": "https://github.com/PedroLourega",
+      "demo": ""
+    }
+  },
+  {
+    "title": "ETL para Games (Python + Pandas)",
+    "description": "Pipeline ETL com CSV de jogadores, geração de mensagens personalizadas por status e menu interativo no terminal para consulta por ID.",
+    "tags": ["python", "pandas", "etl", "csv", "cli"],
+    "image": "",
+    "links": {
+      "github": "https://github.com/PedroLourega",
+      "demo": ""
+    }
+  }
 ]
