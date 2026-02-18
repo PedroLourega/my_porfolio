@@ -2,30 +2,50 @@
 {% block title %}Projetos | Pedro Lourega{% endblock %}
 
 {% block content %}
-<section class="reveal">
-  <h1>Projetos</h1>
-
-  {% if active_tag %}
+<section class="projects-section reveal">
+  <div class="projects-header">
+    <h1>Projetos</h1>
     <p class="muted">
-      Filtrando por: <strong>{{ active_tag }}</strong> — <a href="/projects">limpar</a>
+      Cada projeto está em um card separado, com foco em contexto, funcionalidades e tecnologias.
     </p>
-  {% endif %}
+    <p class="muted projects-help">
+      Para adicionar imagem: coloque o arquivo em <code>static/img/projects/</code> e preencha o campo <code>image</code> no
+      <code>projects.json</code>.
+    </p>
 
-  <div class="grid">
+    {% if active_tag %}
+      <p class="muted">
+        Filtrando por: <strong>{{ active_tag }}</strong> — <a href="/projects">limpar filtro</a>
+      </p>
+    {% endif %}
+  </div>
+
+  <div class="projects-grid">
     {% for p in projects %}
       {% set tags = p.get('tags', []) %}
       {% set links = p.get('links', {}) %}
+      {% set img = p.get('image') %}
 
-      <article class="card reveal">
-              {% set img = p.get('image') %}
-    {% if img %}
-      <img class="card-img"
-          src="{{ url_for('static', filename='img/projects/' ~ img) }}"
-          alt="{{ p.get('title', 'Projeto') }}"
-          loading="lazy">
-    {% endif %}
+      <article class="card project-card reveal">
+        {% if img %}
+          <img
+            class="card-img project-card-img"
+            src="{{ url_for('static', filename='img/projects/' ~ img) }}"
+            alt="{{ p.get('image_alt', p.get('title', 'Projeto')) }}"
+            loading="lazy"
+          >
+        {% endif %}
+
         <h3>{{ p.get('title', 'Sem título') }}</h3>
-        <p>{{ p.get('description', '') }}</p>
+        <p class="project-description">{{ p.get('description', '') }}</p>
+
+        {% if p.get('highlights') %}
+          <ul class="project-highlights">
+            {% for item in p.get('highlights', []) %}
+              <li>{{ item }}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
 
         {% if tags %}
           <div class="tags">
@@ -35,14 +55,22 @@
           </div>
         {% endif %}
 
-        <div class="cardlinks">
+        <div class="cardlinks project-links">
           {% if links.get('github') %}
             <a href="{{ links.get('github') }}" target="_blank" rel="noopener">GitHub</a>
           {% endif %}
           {% if links.get('demo') %}
             <a href="{{ links.get('demo') }}" target="_blank" rel="noopener">Demo</a>
           {% endif %}
+          {% if links.get('case') %}
+            <a href="{{ links.get('case') }}" target="_blank" rel="noopener">Case</a>
+          {% endif %}
         </div>
+      </article>
+    {% else %}
+      <article class="card">
+        <h3>Nenhum projeto encontrado</h3>
+        <p class="muted">Não há resultados para esse filtro no momento.</p>
       </article>
     {% endfor %}
   </div>

@@ -2,26 +2,72 @@
 {% block title %}Contato | Pedro Lourega{% endblock %}
 
 {% block content %}
-<section class="reveal">
-  <h1>Contato</h1>
+<section class="contact-section reveal">
+  <div class="contact-header">
+    <h1>Contato</h1>
+    <p class="muted">
+      Se quiser conversar sobre oportunidades, projetos ou freelas, me chama por algum canal abaixo.
+    </p>
+  </div>
 
-  {% if success %}
-    <p class="success">Mensagem enviada! (no V1 é simulado — depois a gente liga no Mongo/email)</p>
-  {% endif %}
+  <div class="contact-grid">
+    <article class="card contact-card reveal">
+      <h2>Informações diretas</h2>
+      <p class="muted">Canais principais para contato rápido.</p>
 
-  {% if errors %}
-    <div class="errors">
-      {% for e in errors %}
-        <p>• {{ e }}</p>
-      {% endfor %}
-    </div>
-  {% endif %}
+      <ul class="contact-list">
+        <li>
+          <span class="contact-label">Email</span>
+          <a href="mailto:SEU_EMAIL@exemplo.com">SEU_EMAIL@exemplo.com</a>
+        </li>
+        <li>
+          <span class="contact-label">Telefone</span>
+          <a href="tel:+5551999999999">+55 (51) 99999-9999</a>
+        </li>
+        <li>
+          <span class="contact-label">Localização</span>
+          <span>Porto Alegre, RS</span>
+        </li>
+      </ul>
 
-  <form method="post" class="form">
-    <input name="name" placeholder="Seu nome" value="{{ values.name if values else '' }}">
-    <input name="email" placeholder="Seu email" value="{{ values.email if values else '' }}">
-    <textarea name="message" placeholder="Sua mensagem">{{ values.message if values else '' }}</textarea>
-    <button class="btn" type="submit">Enviar</button>
-  </form>
+      <div class="cta cta-left">
+        <a class="btn btn-icon" href="https://www.linkedin.com/in/seu-linkedin" target="_blank" rel="noopener">
+          <i class="devicon-linkedin-plain"></i> LinkedIn
+        </a>
+
+        <a class="btn ghost" href="{{ url_for('static', filename='files/CV_Pedro_Lourega.pdf') }}" download>
+          Baixar CV
+        </a>
+      </div>
+
+      <p class="muted contact-tip">
+        Dica: atualize email, telefone e link do LinkedIn com seus dados finais antes de publicar.
+      </p>
+    </article>
+
+    <article class="card contact-card reveal">
+      <h2>Me envie uma mensagem</h2>
+      <p class="muted">Você também pode preencher o formulário abaixo.</p>
+
+      {% if success %}
+        <p class="success">Mensagem enviada! (no V1 é simulado — depois a gente liga no Mongo/email)</p>
+      {% endif %}
+
+      {% if errors %}
+        <div class="errors">
+          {% for e in errors %}
+            <p>• {{ e }}</p>
+          {% endfor %}
+        </div>
+      {% endif %}
+
+      <form method="post" class="form contact-form">
+        <input name="name" placeholder="Seu nome" value="{{ values.name if values else '' }}">
+        <input name="email" placeholder="Seu email" value="{{ values.email if values else '' }}">
+        <textarea name="message" placeholder="Sua mensagem">{{ values.message if values else '' }}</textarea>
+        <button class="btn" type="submit">Enviar</button>
+      </form>
+    </article>
+  </div>
 </section>
 {% endblock %}
