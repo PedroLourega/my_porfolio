@@ -1,6 +1,6 @@
 [
   {
-    "title": "Study Repository",
+    "title": "Study Repository"
     "description": "Repositório central de estudos contínuos com organização por tópicos, exercícios práticos e mini projetos para reforçar fundamentos de desenvolvimento.",
     "highlights": [
       "Estrutura pensada para revisão rápida: propósito, abordagem, pitfalls e resumo em cada estudo.",
@@ -14,10 +14,19 @@
       "github": "https://github.com/PedroLourega",
       "demo": "",
       "case": ""
+=======
+    "description": "Repositório estruturado para estudos contínuos com exercícios, snippets, mini projetos e anotações técnicas para revisão.",
+    "tags": ["python", "flask", "javascript", "sqlite", "html", "css"],
+    "image": "",
+    "links": {
+      "github": "https://github.com/PedroLourega",
+      "demo": ""
+
     }
   },
   {
     "title": "PsicoConnect",
+
     "description": "Sistema web acadêmico para simular atendimento psicológico online no Brasil, com fluxo separado para psicólogos e pacientes.",
     "highlights": [
       "Login por perfil (psicólogo/paciente) com áreas e permissões distintas para cada tipo de usuário.",
@@ -31,10 +40,18 @@
       "github": "https://github.com/PedroLourega",
       "demo": "",
       "case": ""
+=======
+    "description": "Aplicação web para atendimentos psicológicos online com login para psicólogo/paciente, agendamento e visualização de consultas.",
+    "tags": ["python", "flask", "sqlite", "html", "css", "javascript"],
+    "image": "",
+    "links": {
+      "github": "https://github.com/PedroLourega",
+      "demo": ""
     }
   },
   {
     "title": "Sistema de Gerenciamento de Lan House",
+
     "description": "Projeto acadêmico aplicado a um problema real da Escola MVP, automatizando cálculo de uso e controle de saldo de horas dos usuários.",
     "highlights": [
       "Cálculo automático de tempo total e valor com base no horário de entrada/saída e tabela de preços.",
@@ -48,6 +65,14 @@
       "github": "https://github.com/PedroLourega",
       "demo": "",
       "case": ""
+=======
+    "description": "Sistema acadêmico aplicado a um caso real para cálculo de tempo/valor, cadastro de usuários e gestão de créditos de horas.",
+    "tags": ["python", "flask", "sqlite", "html", "css"],
+    "image": "",
+    "links": {
+      "github": "https://github.com/PedroLourega",
+      "demo": ""
+
     }
   },
   {
@@ -65,6 +90,13 @@
       "github": "https://github.com/PedroLourega",
       "demo": "",
       "case": ""
+=======
+    "description": "Projeto em Python com ETL de planilhas e CRUD em banco NoSQL na nuvem, com tratamento de moeda, padronização e carga em lote.",
+    "tags": ["python", "pandas", "mongodb", "pymongo", "etl", "cli"],
+    "image": "",
+    "links": {
+      "github": "https://github.com/PedroLourega",
+      "demo": ""
     }
   },
   {
@@ -82,6 +114,13 @@
       "github": "https://github.com/PedroLourega",
       "demo": "",
       "case": ""
+=======
+    "description": "Pipeline ETL com CSV de jogadores, geração de mensagens personalizadas por status e menu interativo no terminal para consulta por ID.",
+    "tags": ["python", "pandas", "etl", "csv", "cli"],
+    "image": "",
+    "links": {
+      "github": "https://github.com/PedroLourega",
+      "demo": ""
     }
   }
 ]
