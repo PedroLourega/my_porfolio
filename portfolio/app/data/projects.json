@@ -1,16 +1,46 @@
 [
   {
-    "title": "Study Repository",
+    "title": "Study Repository"
+    "description": "Repositório central de estudos contínuos com organização por tópicos, exercícios práticos e mini projetos para reforçar fundamentos de desenvolvimento.",
+    "highlights": [
+      "Estrutura pensada para revisão rápida: propósito, abordagem, pitfalls e resumo em cada estudo.",
+      "Concentra exercícios, snippets e protótipos para testar conceitos de forma incremental.",
+      "Facilita evolução com commits pequenos e consistentes, focados no aprendizado de cada etapa."
+    ],
+    "tags": ["python", "flask", "javascript", "sqlite", "html", "css"],
+    "image": "",
+    "image_alt": "Visão geral do repositório de estudos",
+    "links": {
+      "github": "https://github.com/PedroLourega",
+      "demo": "",
+      "case": ""
+=======
     "description": "Repositório estruturado para estudos contínuos com exercícios, snippets, mini projetos e anotações técnicas para revisão.",
     "tags": ["python", "flask", "javascript", "sqlite", "html", "css"],
     "image": "",
     "links": {
       "github": "https://github.com/PedroLourega",
       "demo": ""
+
     }
   },
   {
     "title": "PsicoConnect",
+
+    "description": "Sistema web acadêmico para simular atendimento psicológico online no Brasil, com fluxo separado para psicólogos e pacientes.",
+    "highlights": [
+      "Login por perfil (psicólogo/paciente) com áreas e permissões distintas para cada tipo de usuário.",
+      "Módulo do psicólogo para cadastro de pacientes e agendamento de consultas com data, horário e profissional.",
+      "Módulo do paciente para visualizar consultas agendadas de forma clara e responsiva em desktop e mobile."
+    ],
+    "tags": ["python", "flask", "sqlite", "html", "css", "javascript"],
+    "image": "",
+    "image_alt": "Tela principal do PsicoConnect",
+    "links": {
+      "github": "https://github.com/PedroLourega",
+      "demo": "",
+      "case": ""
+=======
     "description": "Aplicação web para atendimentos psicológicos online com login para psicólogo/paciente, agendamento e visualização de consultas.",
     "tags": ["python", "flask", "sqlite", "html", "css", "javascript"],
     "image": "",
@@ -21,16 +51,46 @@
   },
   {
     "title": "Sistema de Gerenciamento de Lan House",
+
+    "description": "Projeto acadêmico aplicado a um problema real da Escola MVP, automatizando cálculo de uso e controle de saldo de horas dos usuários.",
+    "highlights": [
+      "Cálculo automático de tempo total e valor com base no horário de entrada/saída e tabela de preços.",
+      "Aplicação de descontos progressivos por hora extra, reduzindo erros manuais no atendimento.",
+      "Cadastro de usuários com saldo restante e função para adicionar novas horas ao crédito existente."
+    ],
+    "tags": ["python", "flask", "sqlite", "html", "css"],
+    "image": "",
+    "image_alt": "Sistema de controle da lan house",
+    "links": {
+      "github": "https://github.com/PedroLourega",
+      "demo": "",
+      "case": ""
+=======
     "description": "Sistema acadêmico aplicado a um caso real para cálculo de tempo/valor, cadastro de usuários e gestão de créditos de horas.",
     "tags": ["python", "flask", "sqlite", "html", "css"],
     "image": "",
     "links": {
       "github": "https://github.com/PedroLourega",
       "demo": ""
+
     }
   },
   {
     "title": "Sistema de Gestão de Estoque e ETL (Ferragem)",
+    "description": "Sistema em Python para migrar dados de planilhas para banco NoSQL em nuvem, com ETL robusto e CRUD via interface de linha de comando.",
+    "highlights": [
+      "Pipeline ETL com limpeza de encoding, tratamento de separadores e conversão de valores monetários.",
+      "Carga em lote no MongoDB Atlas com uso de variáveis de ambiente para conexão segura.",
+      "Menu CLI modular para adicionar, buscar, atualizar, deletar e listar produtos com validações."
+    ],
+    "tags": ["python", "pandas", "mongodb", "pymongo", "etl", "cli"],
+    "image": "",
+    "image_alt": "Fluxo ETL e gestão de estoque",
+    "links": {
+      "github": "https://github.com/PedroLourega",
+      "demo": "",
+      "case": ""
+=======
     "description": "Projeto em Python com ETL de planilhas e CRUD em banco NoSQL na nuvem, com tratamento de moeda, padronização e carga em lote.",
     "tags": ["python", "pandas", "mongodb", "pymongo", "etl", "cli"],
     "image": "",
@@ -41,6 +101,20 @@
   },
   {
     "title": "ETL para Games (Python + Pandas)",
+    "description": "Projeto prático de ETL para processar base de jogadores, gerar mensagens automáticas por status e exportar resultados para novo arquivo CSV.",
+    "highlights": [
+      "Extração de dados de jogadores via CSV com campos de ID, nickname, status e jogo favorito.",
+      "Transformação com regras de negócio e mensagens aleatórias personalizadas por status (online, ausente, offline).",
+      "Exportação final e menu interativo no terminal para exibição tabular e busca de mensagens por ID."
+    ],
+    "tags": ["python", "pandas", "etl", "csv", "cli"],
+    "image": "",
+    "image_alt": "ETL de jogadores com geração de mensagens",
+    "links": {
+      "github": "https://github.com/PedroLourega",
+      "demo": "",
+      "case": ""
+=======
     "description": "Pipeline ETL com CSV de jogadores, geração de mensagens personalizadas por status e menu interativo no terminal para consulta por ID.",
     "tags": ["python", "pandas", "etl", "csv", "cli"],
     "image": "",
